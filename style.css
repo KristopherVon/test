@@ -233,6 +233,7 @@ nav {
     cursor: pointer;
     transition: background-color 0.3s ease;
     flex: 0 1 auto; /* Maintain equal height with the search bar */
+    margin: 5px 5px; /* Add some space between buttons */
 }
 .filter-btn:hover {
     background-color: #218838;
@@ -343,6 +344,20 @@ button:hover {
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-filter-bar {
+        display: flex;
+        flex-direction: column; /* Stack the filter buttons vertically */
+    }
+    .filter-btn {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+    #search-bar {
+        width: 100%; /* Make the search bar full width */
+        margin-bottom: 10px; /* Add margin for spacing */
     }
 }
 
