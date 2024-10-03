@@ -65,24 +65,24 @@ document.getElementById('search-bar').addEventListener('input', function() {
 // Display Product Details
 function showProductDetails(productName) {
     const products = {
-        'Rice': { img: '1.jpg', price: '₱44/kilo', rating: 4, description: 'Rice is a staple food in many countries.' },
-        'Corn': { img: '2.jpg', price: '₱46/kilo', rating: 5, description: 'Corn is rich in vitamins and minerals.' },
-        'Potato': { img: '3.jpg', price: '₱48/kilo', rating: 4, description: 'Potatoes are versatile and nutritious.' },
-        'Garlic': { img: '4.jpg', price: '₱60/kilo', rating: 4, description: 'Garlic is a popular seasoning in many dishes worldwide.' },
-        'Onion': { img: '5.jpg', price: '₱50/kilo', rating: 5, description: 'Onions are essential in various cuisines for their flavor.' },
-        'Ginger': { img: '6.jpg', price: '₱70/kilo', rating: 4, description: 'Ginger is known for its medicinal and culinary uses.' },
-        'Sugarcane': { img: '7.jpg', price: '₱65/kilo', rating: 5, description: 'Sugarcane is used to produce sugar and other sweeteners.' },
-        'Carrot': { img: '8.jpg', price: '₱60/kilo', rating: 4, description: 'Carrots are rich in beta-carotene, which is good for eyesight.' },
-        'Radish': { img: '9.jpg', price: '₱55/kilo', rating: 4, description: 'Radish is a crunchy, edible root vegetable.' },
-        'Rice seeds': { img: 'seeds.jfif', price: '₱55/kilo', rating: 4, description: 'Rice seeds for planting.' },
-        'Corn seeds': { img: 'seeds2.jfif', price: '₱55/kilo', rating: 4, description: 'Corn seeds for planting.' },
-        'Sunflower seeds': { img: 'seeds3.jfif', price: '₱55/kilo', rating: 4, description: 'Sunflower seeds for planting.' },
-        'Phosphorus fertilizer': { img: 'pfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Phosphorus fertilizer.' },
-        'Nitrogen fertilizer': { img: 'nfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Nitrogen fertilizer.' },
-        'Potassium fertilizer': { img: 'kfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Potassium fertilizer.' },
-        'Trowel': { img: 'tools1.jfif', price: '₱55', rating: 4, description: 'Trowel for gardening.' },
-        'Mini Hand Rake': { img: 'tools2.jfif', price: '₱55', rating: 4, description: 'Mini Hand Rake for gardening.' },
-        'Water Sprinkler': { img: 'tools3.jfif', price: '₱55', rating: 4, description: 'Water Sprinkler for irrigation.' }
+        'Rice': { img: '/Images/Dashboard imgs/1.jpg', price: '₱44/kilo', rating: 4, description: 'Rice is a staple food in many countries.' },
+        'Corn': { img: '/Images/Dashboard imgs/2.jpg', price: '₱46/kilo', rating: 5, description: 'Corn is rich in vitamins and minerals.' },
+        'Potato': { img: '/Images/Dashboard imgs/3.jpg', price: '₱48/kilo', rating: 4, description: 'Potatoes are versatile and nutritious.' },
+        'Garlic': { img: '/Images/Dashboard imgs/4.jpg', price: '₱60/kilo', rating: 4, description: 'Garlic is a popular seasoning in many dishes worldwide.' },
+        'Onion': { img: '/Images/Dashboard imgs/5.jpg', price: '₱50/kilo', rating: 5, description: 'Onions are essential in various cuisines for their flavor.' },
+        'Ginger': { img: '/Images/Dashboard imgs/6.jpg', price: '₱70/kilo', rating: 4, description: 'Ginger is known for its medicinal and culinary uses.' },
+        'Sugarcane': { img: '/Images/Dashboard imgs/7.jpg', price: '₱65/kilo', rating: 5, description: 'Sugarcane is used to produce sugar and other sweeteners.' },
+        'Carrot': { img: '/Images/Dashboard imgs/8.jpg', price: '₱60/kilo', rating: 4, description: 'Carrots are rich in beta-carotene, which is good for eyesight.' },
+        'Radish': { img: '/Images/Dashboard imgs/9.jpg', price: '₱55/kilo', rating: 4, description: 'Radish is a crunchy, edible root vegetable.' },
+        'Rice seeds': { img: '/Images/Dashboard imgs/seeds.jfif', price: '₱55/kilo', rating: 4, description: 'Rice seeds for planting.' },
+        'Corn seeds': { img: '/Images/Dashboard imgs/seeds2.jfif', price: '₱55/kilo', rating: 4, description: 'Corn seeds for planting.' },
+        'Sunflower seeds': { img: '/Images/Dashboard imgs/seeds3.jfif', price: '₱55/kilo', rating: 4, description: 'Sunflower seeds for planting.' },
+        'Phosphorus fertilizer': { img: '/Images/Dashboard imgs/pfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Phosphorus fertilizer.' },
+        'Nitrogen fertilizer': { img: '/Images/Dashboard imgs/nfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Nitrogen fertilizer.' },
+        'Potassium fertilizer': { img: '/Images/Dashboard imgs/kfertilizers.jfif', price: '₱55/kilo', rating: 4, description: 'Potassium fertilizer.' },
+        'Trowel': { img: '/Images/Dashboard imgs/tools1.jfif', price: '₱55', rating: 4, description: 'Trowel for gardening.' },
+        'Mini Hand Rake': { img: '/Images/Dashboard imgs/tools2.jfif', price: '₱55', rating: 4, description: 'Mini Hand Rake for gardening.' },
+        'Water Sprinkler': { img: '/Images/Dashboard imgs/tools3.jfif', price: '₱55', rating: 4, description: 'Water Sprinkler for irrigation.' }
     };
 
     const product = products[productName];
