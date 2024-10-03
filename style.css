@@ -116,6 +116,7 @@ nav {
 }
 .product-item {
     background-color: #fff;
+    margin: 0;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
@@ -123,7 +124,7 @@ nav {
     transition: box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     cursor: pointer;
     height: 100%; /* Allow product item to expand fully */
 }
@@ -135,7 +136,7 @@ nav {
 
 .product-item img {
     max-width: 100%;
-    height: auto;
+    height: 150px;
     margin-bottom: 8px;
     max-height: 120px;
     object-fit: cover;
@@ -205,18 +206,21 @@ nav {
 /* Search and filter bar */
 .search-filter-bar {
     display: flex;
-    justify-content: space-between; /* Center align items */
-    align-items: center; /* Center vertically */
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 15px;
+    width: 100%;
+    padding: 0 10px;
 }
 
-/* Ensuring search bar and filter buttons are equal height */
 #search-bar {
     flex-grow: 1; /* Allow the search bar to take available space */
-    padding: 10px; /* Increase padding for better touch targets */
-    border: 1px solid #ddd; /* Add a border for visibility */
-    border-radius: 5px; /* Round the corners */
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 /* Styling the filter buttons */
