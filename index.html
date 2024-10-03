@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROPSHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">CROPSHOP</div>
+        <ul class="nav-links">
+            <li><a href="#" id="dashboard-link" onclick="showSection('dashboard', this)">Dashboard</a></li>
+            <li><a href="#" id="marketplace-link" onclick="showSection('marketplace', this)">Marketplace</a></li>
+            <li><a href="#" id="cart-link" onclick="showSection('cart', this)">Cart</a></li>
+        </ul>
+        <button class="profile-btn">Profile</button>
+    </nav>
+    
+
+    <div class="content">
+        <!-- Dashboard Section -->
+        <div class="dashboard-box" id="dashboard">
+            <h2>Dashboard Content</h2>
+            <h3>CROPS PRICE PER KILO</h3>
+            <canvas id="salesChart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- Marketplace Section -->
+        <div class="dashboard-box" id="marketplace" style="display: none;">
+            <h2></h2>
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-bar">
+                <input type="text" id="search-bar" placeholder="Search">
+                <button class="filter-btn active" onclick="filterProducts('All', event)">All</button>
+                <button class="filter-btn" onclick="filterProducts('Crops', event)">Crops</button>
+                <button class="filter-btn" onclick="filterProducts('Seeds', event)">Seeds</button>
+                <button class="filter-btn" onclick="filterProducts('Fertilizers', event)">Fertilizers</button>
+                <button class="filter-btn" onclick="filterProducts('Tools', event)">Tools</button>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <div class="product-item" onclick="showProductDetails('Rice')">
+                    <img src="1.jpg" alt="Rice">
+                    <p>Rice</p>
+                    <p>₱44/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Corn')">
+                    <img src="2.jpg" alt="Corn">
+                    <p>Corn</p>
+                    <p>₱46/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Potato')">
+                    <img src="3.jpg" alt="Potato">
+                    <p>Potato</p>
+                    <p>₱48/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Garlic')">
+                    <img src="4.jpg" alt="Garlic">
+                    <p>Garlic</p>
+                    <p>₱50/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Onion')">
+                    <img src="5.jpg" alt="Onion">
+                    <p>Onion</p>
+                    <p>₱60/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Ginger')">
+                    <img src="6.jpg" alt="Ginger">
+                    <p>Ginger</p>
+                    <p>₱70/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Sugarcane')">
+                    <img src="7.jpg" alt="Sugarcane">
+                    <p>Sugarcane</p>
+                    <p>₱65/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Carrot')">
+                    <img src="8.jpg" alt="Carrot">
+                    <p>Carrot</p>
+                    <p>₱60/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Radish')">
+                    <img src="9.jpg" alt="Radish">
+                    <p>Radish</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Rice seeds')">
+                    <img src="seeds.jfif" alt="Rice seeds">
+                    <p>Rice seeds</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Corn seeds')">
+                    <img src="seeds2.jfif" alt="Corn seeds">
+                    <p>Corn seeds</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Sunflower seeds')">
+                <img src="seeds3.jfif" alt="Sunflower seeds">
+                <p>Sunflower seeds</p>
+                <p>₱55/kilo</p>
+                </div> 
+                <div class="product-item" onclick="showProductDetails('Phosphorus fertilizer')">
+                    <img src="pfertilizers.jfif" alt="Phosphorus fertilizer">
+                    <p>Phosphorus fertilizer</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Nitrogen fertilizer')">
+                    <img src="nfertilizers.jfif" alt="Nitrogen fertilizer">
+                    <p>Nitrogen fertilizer</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Potassium fertilizer')">
+                    <img src="kfertilizers.jfif" alt="Potassium fertilize">
+                    <p>Potassium fertilizer</p>
+                    <p>₱55/kilo</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Trowel')">
+                    <img src="tools1.jfif" alt="Trowel">
+                    <p>Trowel</p>
+                    <p>₱55</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Mini Hand Rake')">
+                    <img src="tools2.jfif" alt="Mini Hand Rake">
+                    <p>Mini Hand Rake</p>
+                    <p>₱55</p>
+                </div>
+                <div class="product-item" onclick="showProductDetails('Water Sprinkler')">
+                    <img src="tools3.jfif" alt="Water Sprinkler">
+                    <p>Water Sprinkler</p>
+                    <p>₱55</p>
+                </div>
+            </div>
+        </div>
+ <!-- Product Details Section -->
+ <div class="dashboard-box" id="product-details" style="display: none;">
+    <div class="product-view">
+        <div class="product-image">
+            <img src="" alt="Product Image" id="product-image"> <!-- Dynamically change src -->
+        </div>
+        <div class="product-info">
+            <h2 id="product-title"></h2> <!-- Product Name -->
+            <p id="product-price"></p> <!-- Product Price -->
+            <p id="product-rating">Ratings: </p> <!-- Product Rating (Stars) -->
+            <p id="product-description"></p> <!-- Product Description -->
+            <div class="button-container"> <!-- Button container -->
+                <button onclick="goBackToMarketplace()" class="back-btn">&#8592; </button> <!-- Simple back button -->
+                <button onclick="addToCart()" class="add-to-cart">Add to Cart</button> <!-- Add to Cart Button -->
+                <button onclick="buyNow()" class="buy-now">Buy Now</button> <!-- Buy Now Button -->
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+        <!-- Cart Section -->
+        <div class="dashboard-box" id="cart" style="display: none;">
+            <h2>Cart Content</h2>
+            <p>This is the cart section.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
